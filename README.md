@@ -1,5 +1,7 @@
 # Health Auto Export Server
 
+[English](./README_en.md) | 中文
+
 用于接收和存储 iOS [Health Auto Export](https://www.healthexportapp.com/) 应用数据的自托管服务器。
 
 **技术栈:** Bun + Hono + Drizzle ORM + PostgreSQL
