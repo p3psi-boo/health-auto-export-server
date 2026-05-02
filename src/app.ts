@@ -94,9 +94,10 @@ api.post("/data", requireAuth, async (c) => {
       results.metrics = { success: true, message: "Metrics ingested successfully" };
       successCount++;
     } catch (err) {
+      console.error("Metrics insert error:", err);
       results.metrics = {
         success: false,
-        message: err instanceof Error ? err.message : "Unknown error",
+        message: `Failed query: ${err instanceof Error ? err.message : String(err)}`,
       };
       failCount++;
     }
